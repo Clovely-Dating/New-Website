@@ -73,13 +73,12 @@ function Index() {
               Built on the Gottman Institute&rsquo;s 40 years of research
             </div>
             <h1 className="mt-6 font-display text-5xl leading-[1.04] font-bold tracking-tight text-balance sm:text-6xl">
-              Found for the long game, not the{" "}
+              For the long haul, not the{" "}
               <span className="text-gradient-warm">next swipe.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Clovely reads the signals that actually predict a lasting relationship and pairs you
-              with a coach who&rsquo;s both AI and human. No games, no ghosting, no pressure to
-              perform.
+              Clovely reads the signals that predict a lasting relationship and pairs you with a
+              coach that will help you reach your relationship goals.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
