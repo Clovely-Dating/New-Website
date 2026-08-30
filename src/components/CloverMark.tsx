@@ -7,30 +7,26 @@ type Props = { className?: string };
 export function CloverMark({ className }: Props) {
   return (
     <svg viewBox="0 0 100 100" className={className} role="img" aria-label="Clovely">
-      <g>
-        {/* top — warmth */}
+      <g transform="rotate(24 50 50)">
+        {/* top — warmth: round heart-like petal */}
         <path
-          d="M50 46C34 46 26 38 26 26S36 6 50 6s24 8 24 20-8 20-24 20Z"
+          d="M50 47C30 47 23 36 23 25 23 13 33 5 42 5c5 0 8 3 8 3s3-3 8-3c9 0 19 8 19 20 0 11-7 22-27 22Z"
           fill="var(--color-coral)"
-          transform="rotate(-12 50 50)"
         />
         {/* right — openness */}
         <path
-          d="M54 50c0-16 8-24 20-24s20 10 20 24-8 24-20 24-20-8-20-24Z"
+          d="M53 50c0-20 11-27 22-27 12 0 20 10 20 19 0 5-3 8-3 8s3 3 3 8c0 9-8 19-20 19-11 0-22-7-22-27Z"
           fill="var(--color-sage)"
-          transform="rotate(-12 50 50)"
         />
         {/* bottom — joy */}
         <path
-          d="M50 54c16 0 24 8 24 20S64 94 50 94s-24-8-24-20 8-20 24-20Z"
+          d="M50 53c20 0 27 11 27 22 0 12-10 20-19 20-5 0-8-3-8-3s-3 3-8 3c-9 0-19-8-19-20 0-11 7-22 27-22Z"
           fill="var(--color-taupe)"
-          transform="rotate(-12 50 50)"
         />
         {/* left — clarity */}
         <path
-          d="M46 50c0 16-8 24-20 24S6 64 6 50s8-24 20-24 20 8 20 24Z"
+          d="M47 50c0 20-11 27-22 27-12 0-20-10-20-19 0-5 3-8 3-8s-3-3-3-8c0-9 8-19 20-19 11 0 22 7 22 27Z"
           fill="var(--color-plum)"
-          transform="rotate(-12 50 50)"
         />
         <circle cx="50" cy="50" r="6" fill="var(--color-background)" />
       </g>
