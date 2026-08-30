@@ -7,17 +7,17 @@ import avatarMaya from "@/assets/avatar-maya.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Clovely — Dating built on Gottman relationship research" },
+      { title: "Clovely — Personality-first dating for something real" },
       {
         name: "description",
         content:
-          "Clovely matches you on what actually predicts a lasting relationship, and pairs you with a relationship coach. Built for people looking for the long term.",
+          "Clovely is personality-first, voice-led dating. Match on what actually predicts a lasting relationship, with a relationship coach in your corner.",
       },
       { property: "og:title", content: "Clovely — Dating built for the long term" },
       {
         property: "og:description",
         content:
-          "Matching grounded in Gottman research, plus a licensed relationship coach. A calmer, safer way to meet someone who wants what you want.",
+          "Personality-first, voice-led matching grounded in relationship research, plus a licensed relationship coach. A warmer way to meet someone who wants what you want.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -26,9 +26,13 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const SECTION = "border-t border-border py-16 sm:py-24";
+const EYEBROW = "text-sm font-medium uppercase tracking-[0.3em] text-muted-foreground";
+const H2 = "mt-4 font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl";
+
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground font-body text-[17px] leading-relaxed antialiased sm:text-lg">
+    <div className="min-h-screen bg-background font-body text-[17px] leading-relaxed text-foreground antialiased sm:text-lg">
       {/* NAV */}
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
         <div className="flex items-center gap-3">
@@ -36,7 +40,7 @@ function Index() {
           <div>
             <p className="font-display text-xl font-bold leading-none tracking-tight">Clovely</p>
             <p className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
-              Long term matching
+              Personality-first dating
             </p>
           </div>
         </div>
@@ -51,7 +55,7 @@ function Index() {
             Safety
           </a>
         </nav>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
           <button className="hidden text-base text-muted-foreground transition-colors hover:text-foreground sm:block">
             Sign in
           </button>
@@ -66,13 +70,13 @@ function Index() {
 
       <main className="mx-auto max-w-6xl px-6">
         {/* HERO */}
-        <section className="grid items-center gap-10 pt-8 pb-20 lg:grid-cols-12">
+        <section className="grid items-center gap-12 pb-16 pt-8 sm:pb-24 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3.5 py-2 text-sm text-muted-foreground">
               <span className="size-1.5 rounded-full bg-sage-deep" />
-              Built on the Gottman Institute&rsquo;s 40 years of research
+              Personality-first &amp; voice-led
             </div>
-            <h1 className="mt-6 font-display text-5xl leading-[1.05] font-bold tracking-tight text-balance sm:text-6xl lg:text-7xl">
+            <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight text-balance sm:text-6xl lg:text-7xl">
               For the long haul, not the{" "}
               <span className="text-gradient-warm">next swipe.</span>
             </h1>
@@ -91,30 +95,30 @@ function Index() {
                 href="#method"
                 className="rounded-full border border-border px-7 py-4 text-lg text-muted-foreground transition-colors hover:border-foreground/30 hover:text-foreground"
               >
-                See the science
+                See how it works
               </a>
             </div>
-            <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
+            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
-                <span className="size-1.5 rounded-full bg-coral" /> 82% report deeper first
-                conversations
+                <span className="size-1.5 rounded-full bg-coral" /> Voices before photos
               </div>
               <div className="flex items-center gap-2">
-                <span className="size-1.5 rounded-full bg-sage-deep" /> 7 in 10 stay 6+ months
+                <span className="size-1.5 rounded-full bg-sage-deep" /> Matches with meaning, not
+                volume
               </div>
             </div>
           </div>
 
           {/* match + coach card */}
           <div className="lg:col-span-5">
-            <div className="space-y-4 rounded-3xl border border-border bg-card p-4 shadow-soft">
-              <div className="flex items-center justify-between px-1">
+            <div className="space-y-4 rounded-3xl border border-border bg-card p-5 shadow-soft sm:p-6">
+              <div className="flex items-center justify-between">
                 <p className="font-display text-base font-bold">Your match</p>
                 <span className="text-[11px] uppercase tracking-widest text-muted-foreground">
                   Compatibility
                 </span>
               </div>
-              <div className="flex items-center gap-3 rounded-2xl border border-border bg-secondary p-3">
+              <div className="flex items-center gap-4 rounded-2xl border border-border bg-secondary p-4">
                 <img
                   src={avatarMaya}
                   alt="Maya, a Clovely member"
@@ -124,10 +128,12 @@ function Index() {
                   className="size-14 shrink-0 rounded-xl object-cover"
                 />
                 <div className="min-w-0">
-                  <p className="truncate font-display text-base font-bold">Maya, 31</p>
-                  <p className="text-sm text-muted-foreground">Product designer · 22 min away</p>
+                  <p className="truncate font-display text-base font-bold">Maya, 27</p>
+                  <p className="text-sm text-muted-foreground">
+                    Illustrator · replied to your voice note
+                  </p>
                 </div>
-                <div className="ml-auto text-right">
+                <div className="ml-auto shrink-0 text-right">
                   <p className="font-display text-2xl font-bold text-coral">92</p>
                   <p className="text-[10px] uppercase tracking-widest text-muted-foreground">
                     / 100
@@ -135,26 +141,28 @@ function Index() {
                 </div>
               </div>
 
-              <div className="space-y-2.5 px-1 text-sm">
+              <div className="space-y-3 text-sm">
                 {[
                   { label: "Communication", value: 95, tone: "bg-coral" },
                   { label: "Shared values", value: 88, tone: "bg-plum" },
                   { label: "Conflict style", value: 90, tone: "bg-sage-deep" },
                 ].map((s) => (
                   <div key={s.label} className="flex items-center gap-3">
-                    <span className="w-32 text-muted-foreground">{s.label}</span>
+                    <span className="w-32 shrink-0 text-muted-foreground">{s.label}</span>
                     <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-muted">
                       <div
                         className={`h-full rounded-full ${s.tone}`}
                         style={{ width: `${s.value}%` }}
                       />
                     </div>
-                    <span className="w-8 text-right text-muted-foreground">{s.value}</span>
+                    <span className="w-8 shrink-0 text-right text-muted-foreground">
+                      {s.value}
+                    </span>
                   </div>
                 ))}
               </div>
 
-              <div className="rounded-2xl border border-coral/30 bg-coral/10 p-3.5">
+              <div className="rounded-2xl border border-coral/30 bg-coral/10 p-4">
                 <div className="flex items-center gap-2">
                   <span className="size-1.5 rounded-full bg-coral" />
                   <p className="font-display text-sm font-bold text-coral">
@@ -162,8 +170,8 @@ function Index() {
                   </p>
                 </div>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  Maya and you both handle conflict by reaching for repair. Here&rsquo;s a softer
-                  opener for your first video call…
+                  You and Maya both ease tension with humor. Here&rsquo;s a fun opener for your
+                  first call…
                 </p>
               </div>
             </div>
@@ -171,48 +179,53 @@ function Index() {
         </section>
 
         {/* METHOD */}
-        <section id="method" className="border-t border-border py-20">
-          <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">The method</p>
-          <h2 className="mt-3 max-w-2xl font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl">
-            Match on what actually keeps two people together
-          </h2>
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+        <section id="method" className={SECTION}>
+          <div className="max-w-2xl">
+            <p className={EYEBROW}>How matching works</p>
+            <h2 className={H2}>Personality first. Looks come later.</h2>
+            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+              Photos are blurred until you&rsquo;ve heard each other. Every match starts with a
+              voice note, so you fall for how someone thinks and talks — not just how they look.
+              Underneath it all, decades of relationship research quietly do the math.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
               {
                 n: "01",
                 tone: "bg-coral/15 text-coral",
-                title: "Communication style",
-                body: "The way you share needs, ease tension, and come back together after a hard moment — the clearest signal of whether love lasts.",
+                title: "Voice-led first impressions",
+                body: "Introduce yourself with a voice note, not a highlight reel. You hear a laugh, a pause, a vibe — the stuff a photo never shows.",
               },
               {
                 n: "02",
                 tone: "bg-sage/40 text-sage-deep",
-                title: "Core values & life goals",
-                body: "Family, money, ambition, and the life you want in ten years. Small mismatches here slowly pull even strong chemistry apart.",
+                title: "Values & life goals",
+                body: "Family, money, ambition, the life you want in ten years. We match on the things that matter long after the spark.",
               },
               {
                 n: "03",
                 tone: "bg-taupe/30 text-plum",
-                title: "Conflict & repair",
-                body: "Every couple disagrees. What matters is how you repair. We weight your ability to reconnect far above a spark.",
+                title: "How you make up",
+                body: "Every couple disagrees. What counts is how you come back together — so we weigh repair way above first-date fireworks.",
               },
             ].map((c) => (
-              <div key={c.n} className="rounded-3xl border border-border bg-card p-6">
+              <div key={c.n} className="rounded-3xl border border-border bg-card p-6 sm:p-8">
                 <div
                   className={`grid size-12 place-items-center rounded-xl font-display text-xl font-bold ${c.tone}`}
                 >
                   {c.n}
                 </div>
-                <p className="mt-5 font-display text-xl font-bold">{c.title}</p>
-                <p className="mt-2 text-base leading-relaxed text-muted-foreground">{c.body}</p>
+                <p className="mt-6 font-display text-xl font-bold">{c.title}</p>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">{c.body}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* COACH */}
-        <section id="coach" className="border-t border-border py-20">
-          <div className="grid items-center gap-10 lg:grid-cols-2">
+        <section id="coach" className={SECTION}>
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <img
               src={coachImg}
               alt="A Clovely relationship coach in her studio"
@@ -222,15 +235,13 @@ function Index() {
               className="aspect-square w-full rounded-3xl object-cover shadow-soft"
             />
             <div>
-              <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">The coach</p>
-              <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl">
-                A relationship coach who knows your story
-              </h2>
+              <p className={EYEBROW}>The coach</p>
+              <h2 className={H2}>A relationship coach in your corner</h2>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                Your relationship coach notices the patterns in your dating life, flags what to
-                watch for, and helps you act on it — right when it matters.
+                Your coach spots the patterns in your dating life, cheers the wins, and talks you
+                through the wobbles — like a wise friend who happens to know the science.
               </p>
-              <ul className="mt-6 space-y-3 text-base text-muted-foreground">
+              <ul className="mt-8 space-y-4 text-base text-muted-foreground">
                 {[
                   [
                     "bg-coral",
@@ -248,13 +259,13 @@ function Index() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-7 rounded-2xl border border-border bg-secondary p-5">
+              <div className="mt-8 rounded-2xl border border-border bg-secondary p-6">
                 <p className="text-base leading-relaxed text-muted-foreground">
                   &ldquo;I was about to ghost a genuinely good match. My coach reframed the tension
                   and gave me a line to use. We matched a month later.&rdquo;
                 </p>
                 <p className="mt-3 font-display text-base font-bold">
-                  Priya, 34 · Member since 2024
+                  Priya, 28 · Member since 2024
                 </p>
               </div>
             </div>
@@ -262,18 +273,15 @@ function Index() {
         </section>
 
         {/* SAFETY */}
-        <section id="safety" className="border-t border-border py-20">
-          <div className="grid items-center gap-10 lg:grid-cols-2">
+        <section id="safety" className={SECTION}>
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
-              <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">
-                Safety by design
-              </p>
-              <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl">
-                Built so you feel held, not exposed
-              </h2>
+              <p className={EYEBROW}>Safety by design</p>
+              <h2 className={H2}>Built so you feel held, not exposed</h2>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                Every account is identity-verified before messaging starts, you control who can
-                reach out first, and the boundaries you set once are enforced automatically.
+                Everyone is identity-verified before messaging opens, you decide who can reach out
+                first, and the boundaries you set are enforced automatically — no awkward
+                conversations needed.
               </p>
             </div>
             <img
@@ -288,15 +296,15 @@ function Index() {
         </section>
 
         {/* CTA */}
-        <section id="join" className="border-t border-border py-20">
-          <div className="rounded-[2rem] border border-border bg-secondary p-10 text-center sm:p-14">
+        <section id="join" className={SECTION}>
+          <div className="rounded-[2rem] border border-border bg-secondary p-8 text-center sm:p-14">
             <CloverMark className="mx-auto size-14" />
-            <h2 className="mt-6 font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl">
-              Ready to stop swiping and start building?
+            <h2 className="mx-auto mt-6 max-w-2xl font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl">
+              Ready to meet someone worth the group chat debrief?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
-              Built for people who want something that lasts. A calmer, safer space to meet someone
-              who wants what you want.
+              Personality-first, voice-led, coach-backed. A warmer way to meet someone who wants
+              what you want.
             </p>
             <form className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row">
               <label htmlFor="email" className="sr-only">
@@ -329,7 +337,7 @@ function Index() {
             Safety
           </a>
           <a href="#method" className="transition-colors hover:text-foreground">
-            The research
+            How it works
           </a>
           <a href="#join" className="transition-colors hover:text-foreground">
             Join
