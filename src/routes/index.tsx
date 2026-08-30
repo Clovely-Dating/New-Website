@@ -46,13 +46,13 @@ function Index() {
         </div>
         <nav className="hidden items-center gap-8 text-base text-muted-foreground md:flex">
           <a href="#method" className="transition-colors hover:text-foreground">
-            How matching works
+            How It Works
           </a>
           <a href="#coach" className="transition-colors hover:text-foreground">
-            The coach
+            The Coach
           </a>
           <a href="#safety" className="transition-colors hover:text-foreground">
-            Safety
+            Privacy & Safety
           </a>
         </nav>
         <div className="flex items-center gap-4">
@@ -103,8 +103,8 @@ function Index() {
                 <span className="size-1.5 rounded-full bg-coral" /> Voices before photos
               </div>
               <div className="flex items-center gap-2">
-                <span className="size-1.5 rounded-full bg-sage-deep" /> Matches with meaning, not
-                volume
+                <span className="size-1.5 rounded-full bg-sage-deep" /> Matches with quality, not
+                quantity
               </div>
             </div>
           </div>
@@ -181,7 +181,7 @@ function Index() {
         {/* METHOD */}
         <section id="method" className={SECTION}>
           <div className="max-w-2xl">
-            <p className={EYEBROW}>How matching works</p>
+            <p className={EYEBROW}>HOW IT WORKS</p>
             <h2 className={H2}>Personality first. Looks come later.</h2>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
               Photos are blurred until you&rsquo;ve heard each other. Every match starts with a
@@ -201,13 +201,13 @@ function Index() {
                 n: "02",
                 tone: "bg-sage/40 text-sage-deep",
                 title: "Values & life goals",
-                body: "Family, money, ambition, the life you want in ten years. We match on the things that matter long after the spark.",
+                body: "Family, money, ambition — the life you want in ten years. We match on the things that matter long after the spark.",
               },
               {
                 n: "03",
                 tone: "bg-taupe/30 text-plum",
-                title: "How you make up",
-                body: "Every couple disagrees. What counts is how you come back together — so we weigh repair way above first-date fireworks.",
+                title: 'How you "make up"',
+                body: "Every couple disagrees. What counts is how you come back together — so we coach you on overcoming the friction.\u00a0",
               },
             ].map((c) => (
               <div key={c.n} className="rounded-3xl border border-border bg-card p-6 sm:p-8">
@@ -276,11 +276,11 @@ function Index() {
         <section id="safety" className={SECTION}>
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
-              <p className={EYEBROW}>Safety by design</p>
-              <h2 className={H2}>Built so you feel held, not exposed</h2>
+              <p className={EYEBROW}>PRIVACY & SAFETY</p>
+              <h2 className={H2}>Built so you feel heard, not exposed</h2>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                Everyone is identity-verified before messaging opens, you decide who can reach out
-                first, and the boundaries you set are enforced automatically — no awkward
+                Everyone is identity-verified before matching begins. You decide who want to message
+                with first; the boundaries you set are automatically enforced — no awkward
                 conversations needed.
               </p>
             </div>
@@ -330,17 +330,17 @@ function Index() {
       <footer className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-border px-6 py-10 text-sm text-muted-foreground sm:flex-row">
         <div className="flex items-center gap-2">
           <CloverMark className="size-8" />
-          <span>Clovely · Finding depth through luck and love</span>
+          <span>Clovely · Reclaiming human connection from the scroll</span>
         </div>
         <div className="flex gap-6">
           <a href="#safety" className="transition-colors hover:text-foreground">
-            Safety
+            Join Today
           </a>
           <a href="#method" className="transition-colors hover:text-foreground">
-            How it works
+            Terms & Condictions
           </a>
           <a href="#join" className="transition-colors hover:text-foreground">
-            Join
+            Privacy Policy
           </a>
         </div>
       </footer>
