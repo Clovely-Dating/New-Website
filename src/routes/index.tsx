@@ -215,7 +215,7 @@ function Index() {
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <img
               src={coachImg}
-              alt="A Clovely relationship coach in her studio"
+              alt="A Clovely relationship coach in their studio"
               width={1024}
               height={1024}
               loading="lazy"
