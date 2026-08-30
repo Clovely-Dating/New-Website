@@ -63,7 +63,7 @@ function Index() {
             href="#join"
             className="rounded-full bg-primary px-5 py-2.5 text-base font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
-            Create profile
+            Join the Waitlist
           </a>
         </div>
       </header>
