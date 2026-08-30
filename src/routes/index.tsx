@@ -174,7 +174,7 @@ function Index() {
         <section id="method" className="border-t border-border py-20">
           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">The method</p>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl">
-            Three signals we match on, drawn from the research
+            Match on what actually keeps two people together
           </h2>
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {[
@@ -182,19 +182,19 @@ function Index() {
                 n: "01",
                 tone: "bg-coral/15 text-coral",
                 title: "Communication style",
-                body: "How you express needs, soothe tension, and repair after a hard moment — the strongest predictor of staying together.",
+                body: "The way you share needs, ease tension, and come back together after a hard moment — the clearest signal of whether love lasts.",
               },
               {
                 n: "02",
                 tone: "bg-sage/40 text-sage-deep",
                 title: "Core values & life goals",
-                body: "Family, money, and where you want to be in ten years. Small mismatches here quietly erode everything else over time.",
+                body: "Family, money, ambition, and the life you want in ten years. Small mismatches here slowly pull even strong chemistry apart.",
               },
               {
                 n: "03",
                 tone: "bg-taupe/30 text-plum",
                 title: "Conflict & repair",
-                body: "Not whether you fight, but how you come back. We weight your repair moves higher than your chemistry score.",
+                body: "Every couple disagrees. What matters is how you repair. We weight your ability to reconnect far above a spark.",
               },
             ].map((c) => (
               <div key={c.n} className="rounded-3xl border border-border bg-card p-6">
@@ -224,18 +224,18 @@ function Index() {
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">The coach</p>
               <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl">
-                A coach that&rsquo;s half AI, half a real person
+                A coach that blends AI insight with human care
               </h2>
               <p className="mt-5 leading-relaxed text-muted-foreground">
-                Your AI coach reads the pattern in your conversations and flags what to watch for.
-                Then a licensed human coach walks you through it — 20 minutes a month, when it
-                actually matters.
+                Your AI coach notices patterns in your dating life and flags what to watch for. Then
+                a licensed human coach helps you act on it — 20 minutes a month, right when it
+                matters.
               </p>
               <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
                 {[
-                  ["bg-coral", "Real-time nudges before and after each date"],
+                  ["bg-coral", "Gentle nudges before and after each date"],
                   ["bg-sage-deep", "Monthly 1:1 with a licensed relationship coach"],
-                  ["bg-plum", "A private journal that only you and your coach can see"],
+                  ["bg-plum", "A private journal for you and your coach only"],
                 ].map(([tone, text]) => (
                   <li key={text} className="flex gap-3">
                     <span className={`mt-1.5 size-1.5 shrink-0 rounded-full ${tone}`} />
@@ -262,11 +262,11 @@ function Index() {
                 Safety by design
               </p>
               <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl">
-                Built so women feel held, not exposed
+                Built so you feel held, not exposed
               </h2>
               <p className="mt-5 leading-relaxed text-muted-foreground">
-                Every account is identity-verified before a conversation can start, women open every
-                conversation, and the boundaries you set once are enforced automatically.
+                Every account is identity-verified before messaging starts, you control who can
+                reach out first, and the boundaries you set once are enforced automatically.
               </p>
             </div>
             <img
@@ -288,8 +288,8 @@ function Index() {
               Ready to stop swiping and start building?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-              Built for people who want something that lasts. Designed to feel safe, seen, and
-              unhurried — especially for women.
+              Built for people who want something that lasts. A calmer, safer space to meet someone
+              who wants what you want.
             </p>
             <form className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row">
               <label htmlFor="email" className="sr-only">
