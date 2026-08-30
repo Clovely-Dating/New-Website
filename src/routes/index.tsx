@@ -249,9 +249,9 @@ function Index() {
                   ],
                   [
                     "bg-sage-deep",
-                    "A private space to speak with your coach to share successes and address issues",
+                    "A private space to chat with your coach to share issues and successes",
                   ],
-                  ["bg-plum", "Reoccurring 1:1 with a licensed relationship expert."],
+                  ["bg-plum", "Reoccurring 1:1 with a licensed relationship expert"],
                 ].map(([tone, text]) => (
                   <li key={text} className="flex gap-3">
                     <span className={`mt-2 size-1.5 shrink-0 rounded-full ${tone}`} />
