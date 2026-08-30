@@ -156,7 +156,7 @@ function Index() {
                       />
                     </div>
                     <span className="w-8 shrink-0 text-right text-muted-foreground">
-                      {s.value}
+                      {s.value}%
                     </span>
                   </div>
                 ))}
