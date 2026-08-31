@@ -57,7 +57,7 @@ function Index() {
         </nav>
         <div className="flex items-center gap-4">
           <button className="hidden text-base text-muted-foreground transition-colors hover:text-foreground sm:block">
-            Sign in
+            Sign In
           </button>
           <a
             href="#join"
