@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { CloverMark } from "@/components/CloverMark";
 import heroWoman from "@/assets/hero-woman.jpg";
 import coachImg from "@/assets/coach.jpg";
@@ -56,15 +56,18 @@ function Index() {
           </a>
         </nav>
         <div className="flex items-center gap-4">
-          <button className="hidden text-base text-muted-foreground transition-colors hover:text-foreground sm:block">
+          <Link
+            to="/auth"
+            className="hidden text-base text-muted-foreground transition-colors hover:text-foreground sm:block"
+          >
             Sign In
-          </button>
-          <a
-            href="#join"
+          </Link>
+          <Link
+            to="/auth"
             className="rounded-full bg-primary px-5 py-2.5 text-base font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
             Create Profile
-          </a>
+          </Link>
         </div>
       </header>
 
