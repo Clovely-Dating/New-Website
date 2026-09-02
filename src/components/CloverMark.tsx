@@ -12,11 +12,13 @@ export function CloverMark({ className }: Props) {
   return (
     <svg viewBox="0 0 100 100" className={className} role="img" aria-label="Clovely">
       <g transform="rotate(24 50 50)">
-        <path d={PETAL} fill="var(--color-coral)" />
+        <circle cx="50" cy="26" r="21" fill="var(--color-coral)" />
         <path d={PETAL} fill="var(--color-sage)" transform="rotate(90 50 50)" />
-        <path d={PETAL} fill="var(--color-taupe)" transform="rotate(180 50 50)" />
+        <circle cx="50" cy="74" r="21" fill="var(--color-taupe)" />
         <path d={PETAL} fill="var(--color-plum)" transform="rotate(270 50 50)" />
         <circle cx="50" cy="50" r="6" fill="var(--color-background)" />
+      </g>
+
       </g>
     </svg>
   );
