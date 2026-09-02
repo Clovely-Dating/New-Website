@@ -64,7 +64,7 @@ function AuthPage() {
               href={APP_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 rounded-xl bg-foreground px-5 py-3 text-primary-foreground transition-opacity hover:opacity-90"
+              className="inline-flex items-center gap-2.5 rounded-xl bg-black px-5 py-3 text-white transition-opacity hover:opacity-90"
             >
               <AppleLogo className="h-7 w-7" />
               <div className="flex flex-col leading-none">
