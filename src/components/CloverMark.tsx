@@ -18,8 +18,6 @@ export function CloverMark({ className }: Props) {
         <path d={PETAL} fill="var(--color-plum)" transform="rotate(270 50 50)" />
         <circle cx="50" cy="50" r="6" fill="var(--color-background)" />
       </g>
-
-      </g>
     </svg>
   );
 }
