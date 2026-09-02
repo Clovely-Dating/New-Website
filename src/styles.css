@@ -121,3 +121,45 @@
 @utility bg-gradient-warm {
   background-image: var(--gradient-warm);
 }
+
+/* Slow-drifting lava-lamp gradient backdrop */
+@keyframes lava-a {
+  0% { transform: translate3d(-12%, -8%, 0) scale(1); }
+  50% { transform: translate3d(18%, 14%, 0) scale(1.25); }
+  100% { transform: translate3d(-12%, -8%, 0) scale(1); }
+}
+@keyframes lava-b {
+  0% { transform: translate3d(15%, 10%, 0) scale(1.15); }
+  50% { transform: translate3d(-14%, -12%, 0) scale(0.9); }
+  100% { transform: translate3d(15%, 10%, 0) scale(1.15); }
+}
+@keyframes lava-c {
+  0% { transform: translate3d(8%, -16%, 0) scale(1.05); }
+  50% { transform: translate3d(-10%, 18%, 0) scale(1.3); }
+  100% { transform: translate3d(8%, -16%, 0) scale(1.05); }
+}
+
+@utility lava-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(70px);
+  will-change: transform;
+}
+
+@utility lava-1 { animation: lava-a 26s ease-in-out infinite; }
+@utility lava-2 { animation: lava-b 34s ease-in-out infinite; }
+@utility lava-3 { animation: lava-c 30s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lava-1, .lava-2, .lava-3 { animation: none; }
+}
+
+/* Frosted embossed glass frame */
+@utility glass-emboss {
+  background: color-mix(in oklab, var(--background) 55%, transparent);
+  backdrop-filter: blur(14px) saturate(135%);
+  box-shadow:
+    inset 0 2px 3px color-mix(in oklab, white 70%, transparent),
+    inset 0 -2px 4px color-mix(in oklab, var(--plum) 22%, transparent),
+    0 26px 60px -26px color-mix(in oklab, var(--plum) 55%, transparent);
+}

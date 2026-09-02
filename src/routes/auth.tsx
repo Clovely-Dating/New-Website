@@ -29,17 +29,24 @@ export const Route = createFileRoute("/auth")({
 
 function AuthPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-background px-5 py-16">
+    <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-background px-5 py-16">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
+        <div className="lava-blob lava-1 -left-24 top-[-10%] h-[42rem] w-[42rem] bg-coral/35" />
+        <div className="lava-blob lava-2 -right-32 top-[10%] h-[38rem] w-[38rem] bg-sage/40" />
+        <div className="lava-blob lava-3 bottom-[-20%] left-[20%] h-[40rem] w-[40rem] bg-taupe/40" />
+        <div className="lava-blob lava-2 bottom-[-10%] right-[5%] h-[26rem] w-[26rem] bg-plum/20" />
+      </div>
+
       <div className="w-full max-w-md">
         <Link to="/" className="mb-10 flex items-center justify-center gap-3">
           <CloverMark className="h-10 w-10" />
           <span className="font-display text-2xl font-bold tracking-tight">Clovely</span>
         </Link>
 
-        <div className="rounded-3xl border border-border bg-card p-7 shadow-sm sm:p-9">
+        <div className="glass-emboss rounded-3xl border border-border/60 p-7 sm:p-9">
           <div className="text-center">
-            <h1 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
-              Clovely lives on your phone
+            <h1 className="font-display text-2xl font-bold tracking-tight whitespace-nowrap sm:text-[1.75rem]">
+              Get Clovely on your phone
             </h1>
             <p className="mt-3 text-base leading-relaxed text-muted-foreground">
               The full experience — personality quiz, voice notes, matches, and your relationship
@@ -48,7 +55,7 @@ function AuthPage() {
           </div>
 
           <div className="mt-8 flex justify-center">
-            <div className="relative w-56 overflow-hidden rounded-[2.25rem] border-[6px] border-card-foreground/10 bg-card-foreground/5 shadow-xl sm:w-64">
+            <div className="glass-emboss relative w-56 overflow-hidden rounded-[2.25rem] border-[6px] border-white/40 sm:w-64">
               <img
                 src={appPreview}
                 alt="Clovely app preview showing a match profile with voice notes and compatibility scores"
@@ -56,8 +63,13 @@ function AuthPage() {
                 height={1024}
                 className="h-auto w-full"
               />
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 rounded-[1.9rem] bg-gradient-to-br from-white/45 via-transparent to-white/15"
+              />
             </div>
           </div>
+
 
           <div className="mt-8 flex flex-col items-center gap-4">
             <a
