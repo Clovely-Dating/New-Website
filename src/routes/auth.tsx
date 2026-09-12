@@ -38,7 +38,10 @@ function AuthPage() {
 
         <div className="mt-8 max-w-xl">
           <h1 className="font-display text-[2rem] font-extrabold leading-[1.1] tracking-tight text-ink sm:text-5xl">
-            (COMING SOON)&nbsp;
+            (COMING SOON)&nbsp;&nbsp;
+            <br />
+            <br />
+            <br />
             Dating for the long haul, on your phone.
           </h1>
           <p className="mx-auto mt-4 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg">
