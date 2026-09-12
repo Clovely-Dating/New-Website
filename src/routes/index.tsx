@@ -128,8 +128,7 @@ function Index() {
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
                 Every match starts with a voice note, so you fall for how someone thinks and talks —
                 not just how they look. Underneath it all, decades of relationship research quietly do
-                the math.
-                Underneath it all, decades of relationship research quietly do the math.
+                the math to calculate compatibility.&nbsp;
               </p>
             </div>
             <div className="flex w-full items-center justify-center overflow-hidden rounded-3xl border border-glass-stroke bg-glass p-2 shadow-glass backdrop-blur-xl">
