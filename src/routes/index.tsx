@@ -245,8 +245,8 @@ function Index() {
               <h2 className={H2}>Built so you feel heard, not exposed</h2>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
                 Everyone is photo and voice-verified before matching begins. We give you the best
-                matches; you decide who want to connect with.&nbsp; Photos are unlocked after both
-                users decide to reveal.&nbsp;
+                matches; you decide who to connect with.&nbsp; Photos are unlocked after users decide
+                to mutually reveal.&nbsp;
               </p>
             </div>
             <img
