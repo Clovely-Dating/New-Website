@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CloverMark } from "@/components/CloverMark";
+import { AppPreviewMockup } from "@/components/AppPreviewMockup";
 import heroWoman from "@/assets/hero-woman.jpg";
 import coachImg from "@/assets/coach.jpg";
-import avatarMaya from "@/assets/avatar-maya.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,7 +32,7 @@ const H2 = "mt-4 font-display text-4xl font-bold tracking-tight text-balance sm:
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background font-body text-[17px] leading-relaxed text-foreground antialiased sm:text-lg">
+    <div className="prism-field min-h-screen bg-background font-body text-[17px] leading-relaxed text-foreground antialiased sm:text-lg">
       {/* NAV */}
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
         <div className="flex items-center gap-3">
@@ -112,72 +112,8 @@ function Index() {
             </div>
           </div>
 
-          {/* match + coach card */}
           <div className="lg:col-span-5">
-            <div className="space-y-4 rounded-3xl border border-border bg-card p-5 shadow-soft sm:p-6">
-              <div className="flex items-center justify-between">
-                <p className="font-display text-base font-bold">Your match</p>
-                <span className="text-[11px] uppercase tracking-widest text-muted-foreground">
-                  Compatibility
-                </span>
-              </div>
-              <div className="flex items-center gap-4 rounded-2xl border border-border bg-secondary p-4">
-                <img
-                  src={avatarMaya}
-                  alt="Maya, a Clovely member"
-                  width={512}
-                  height={512}
-                  loading="lazy"
-                  className="size-14 shrink-0 rounded-xl object-cover"
-                />
-                <div className="min-w-0">
-                  <p className="truncate font-display text-base font-bold">Maya, 27</p>
-                  <p className="text-sm text-muted-foreground">
-                    Illustrator · replied to your voice note
-                  </p>
-                </div>
-                <div className="ml-auto shrink-0 text-right">
-                  <p className="font-display text-2xl font-bold text-coral">92</p>
-                  <p className="text-[10px] uppercase tracking-widest text-muted-foreground">
-                    / 100
-                  </p>
-                </div>
-              </div>
-
-              <div className="space-y-3 text-sm">
-                {[
-                  { label: "Communication", value: 95, tone: "bg-coral" },
-                  { label: "Shared values", value: 88, tone: "bg-plum" },
-                  { label: "Conflict style", value: 90, tone: "bg-sage-deep" },
-                ].map((s) => (
-                  <div key={s.label} className="flex items-center gap-3">
-                    <span className="w-32 shrink-0 text-muted-foreground">{s.label}</span>
-                    <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-muted">
-                      <div
-                        className={`h-full rounded-full ${s.tone}`}
-                        style={{ width: `${s.value}%` }}
-                      />
-                    </div>
-                    <span className="w-8 shrink-0 text-right text-muted-foreground">
-                      {s.value}%
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="rounded-2xl border border-coral/30 bg-coral/10 p-4">
-                <div className="flex items-center gap-2">
-                  <span className="size-1.5 rounded-full bg-coral" />
-                  <p className="font-display text-sm font-bold text-coral">
-                    Your relationship coach
-                  </p>
-                </div>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  You and Maya both ease tension with humor. Here&rsquo;s a fun opener for your
-                  first call…
-                </p>
-              </div>
-            </div>
+            <AppPreviewMockup />
           </div>
         </section>
 
@@ -213,7 +149,7 @@ function Index() {
                 body: "Every couple disagrees. What counts is how you come back together — so we coach you on overcoming the friction.\u00a0",
               },
             ].map((c) => (
-              <div key={c.n} className="rounded-3xl border border-border bg-card p-6 sm:p-8">
+              <div key={c.n} className="rounded-3xl border border-glass-stroke bg-glass p-6 shadow-glass backdrop-blur-xl sm:p-8">
                 <div
                   className={`grid size-12 place-items-center rounded-xl font-display text-xl font-bold ${c.tone}`}
                 >
@@ -262,7 +198,7 @@ function Index() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-8 rounded-2xl border border-border bg-secondary p-6">
+               <div className="mt-8 rounded-2xl border border-glass-stroke bg-glass p-6 shadow-glass backdrop-blur-xl">
                 <p className="text-base leading-relaxed text-muted-foreground">
                   &ldquo;I was about to ghost a genuinely good match. My coach reframed the tension
                   and gave me a line to use. We matched a month later.&rdquo;
@@ -300,7 +236,7 @@ function Index() {
 
         {/* CTA */}
         <section id="join" className={SECTION}>
-          <div className="rounded-[2rem] border border-border bg-secondary p-8 text-center sm:p-14">
+           <div className="rounded-[2rem] border border-glass-stroke bg-glass p-8 text-center shadow-glass backdrop-blur-xl sm:p-14">
             <CloverMark className="mx-auto size-14" />
             <h2 className="mx-auto mt-6 max-w-2xl font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl">
               Ready to meet someone worth the group chat debrief?
