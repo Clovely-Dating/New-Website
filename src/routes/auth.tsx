@@ -29,7 +29,7 @@ export const Route = createFileRoute("/auth")({
 
 function AuthPage() {
   return (
-    <main className="prism-field relative flex min-h-screen flex-col items-center overflow-hidden bg-background px-6 py-10 sm:py-14">
+    <main className="prism-field relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-background px-6 py-10 sm:py-14">
       <div className="flex w-full max-w-3xl flex-col items-center text-center">
         <Link to="/" className="flex items-center gap-2.5">
           <CloverMark className="h-11 w-11 rounded-2xl shadow-glass" />
