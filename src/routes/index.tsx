@@ -126,8 +126,8 @@ function Index() {
               <p className={EYEBROW}>HOW IT WORKS</p>
               <h2 className={H2}>Personality first. Looks come later.</h2>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                Photos are blurred until you&rsquo;ve heard each other. Every match starts with a
-                voice note, so you fall for how someone thinks and talks — not just how they look.
+                Every match starts with a voice note, so you fall for how someone thinks and talks —
+                not just how they look.
                 Underneath it all, decades of relationship research quietly do the math.
               </p>
             </div>
@@ -203,7 +203,7 @@ function Index() {
               <p className={EYEBROW}>The coach</p>
               <h2 className={H2}>A relationship coach in your corner</h2>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                Your Clovely relationship coach spots the patterns, cheers the wins, and walks with you
+                Your Clovely coach spots the patterns, cheers the wins, and walks with you
                 through the wobbles — like a wise friend.
               </p>
               <ul className="mt-8 space-y-4 text-base text-muted-foreground">
@@ -246,7 +246,7 @@ function Index() {
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
                 Everyone is photo and voice-verified before matching begins. We give you the best
                 matches; you decide who to connect with.&nbsp; Photos are unlocked after users decide
-                to mutually reveal.&nbsp;
+                after you and your match decide to mutually reveal.&nbsp;
               </p>
             </div>
             <img
