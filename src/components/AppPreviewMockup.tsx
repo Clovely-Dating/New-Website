@@ -54,9 +54,9 @@ export function AppPreviewMockup({ compact = false }: { compact?: boolean }) {
         <div className="mt-3 flex items-center justify-center gap-2 rounded-full bg-sage/40 px-3 py-2 text-[11px] font-semibold text-ink">
           <LockIcon /> Photos stay hidden until you both agree to reveal.
         </div>
-        <button type="button" className="mt-3 w-full text-center text-xs font-bold text-ink">
+        <div className="mt-3 w-full text-center text-xs font-bold text-ink">
           Why we matched you⌄
-        </button>
+        </div>
       </div>
 
       <div className="mt-5 flex items-center justify-center gap-7">

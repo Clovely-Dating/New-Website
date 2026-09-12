@@ -45,7 +45,6 @@ function AuthPage() {
               The full experience — personality quiz, voice notes, matches, and your relationship
               coach — is built for iOS. Download the app to get started.
             </p>
-          </div>
 
             <div className="mt-8 flex flex-col items-center gap-4 md:items-start">
             <a
