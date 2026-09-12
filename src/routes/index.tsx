@@ -203,7 +203,7 @@ function Index() {
               <p className={EYEBROW}>The coach</p>
               <h2 className={H2}>A relationship coach in your corner</h2>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                Your coach spots the patterns in your dating life, cheers the wins, and walks with you
+                Your Clovely relationship coach spots the patterns, cheers the wins, and walks with you
                 through the wobbles — like a wise friend.
               </p>
               <ul className="mt-8 space-y-4 text-base text-muted-foreground">
@@ -227,10 +227,10 @@ function Index() {
               <div className="mt-8 rounded-2xl border border-glass-stroke bg-glass p-6 shadow-glass backdrop-blur-xl">
                 <p className="text-base leading-relaxed text-muted-foreground">
                   &ldquo;I was about to ghost a genuinely good match. My coach reframed the tension
-                  and gave me a line to use. We matched a month later.&rdquo;
+                  and gave me a line to use. We're still together a month later.&rdquo;
                 </p>
                 <p className="mt-3 font-display text-base font-bold">
-                  Priya, 28 · Member since 2024
+                  Priya, 28 · Member since 2026
                 </p>
               </div>
             </div>
