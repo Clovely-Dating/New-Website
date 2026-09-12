@@ -127,7 +127,8 @@ function Index() {
               <h2 className={H2}>Personality first. Looks come later.</h2>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
                 Every match starts with a voice note, so you fall for how someone thinks and talks —
-                not just how they look.
+                not just how they look. Underneath it all, decades of relationship research quietly do
+                the math.
                 Underneath it all, decades of relationship research quietly do the math.
               </p>
             </div>
