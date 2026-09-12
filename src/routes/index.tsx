@@ -203,8 +203,8 @@ function Index() {
               <p className={EYEBROW}>The coach</p>
               <h2 className={H2}>A relationship coach in your corner</h2>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                Your coach spots the patterns in your dating life, cheers the wins, and talks you
-                through the wobbles — like a wise friend who happens to know the science.
+                Your coach spots the patterns in your dating life, cheers the wins, and walks with you
+                through the wobbles — like a wise friend.
               </p>
               <ul className="mt-8 space-y-4 text-base text-muted-foreground">
                 {[
@@ -214,9 +214,9 @@ function Index() {
                   ],
                   [
                     "bg-sage-deep",
-                    "A private space to chat with your coach to share issues and successes",
+                    "A private space to text your coach to share issues and successes",
                   ],
-                  ["bg-plum", "Reoccurring 1:1 with a licensed relationship expert"],
+                  ["bg-plum", "1:1 virtual or in-person sessions with licensed relationship coaches"],
                 ].map(([tone, text]) => (
                   <li key={text} className="flex gap-3">
                     <span className={`mt-2 size-1.5 shrink-0 rounded-full ${tone}`} />
@@ -244,9 +244,9 @@ function Index() {
               <p className={EYEBROW}>PRIVACY & SAFETY</p>
               <h2 className={H2}>Built so you feel heard, not exposed</h2>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                Everyone is identity-verified before matching begins. You decide who want to message
-                with first; the boundaries you set are automatically enforced — no awkward
-                conversations needed.
+                Everyone is photo and voice-verified before matching begins. We give you the best
+                matches; you decide who want to connect with.&nbsp; Photos are unlocked after both
+                users decide to reveal.&nbsp;
               </p>
             </div>
             <img
