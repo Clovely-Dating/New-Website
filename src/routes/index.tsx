@@ -4,6 +4,7 @@ import { AppPreviewMockup } from "@/components/AppPreviewMockup";
 import heroWoman from "@/assets/hero-woman.jpg";
 import coachImg from "@/assets/remote-relationship-coach.jpg";
 import coachConversation from "@/assets/coach-conversation.png.asset.json";
+import compatibilityMapping from "@/assets/compatibility-mapping.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -120,14 +121,26 @@ function Index() {
 
         {/* METHOD */}
         <section id="method" className={SECTION}>
-          <div className="max-w-2xl">
-            <p className={EYEBROW}>HOW IT WORKS</p>
-            <h2 className={H2}>Personality first. Looks come later.</h2>
-            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              Photos are blurred until you&rsquo;ve heard each other. Every match starts with a
-              voice note, so you fall for how someone thinks and talks — not just how they look.
-              Underneath it all, decades of relationship research quietly do the math.
-            </p>
+          <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,0.72fr)] lg:gap-14">
+            <div className="max-w-2xl">
+              <p className={EYEBROW}>HOW IT WORKS</p>
+              <h2 className={H2}>Personality first. Looks come later.</h2>
+              <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+                Photos are blurred until you&rsquo;ve heard each other. Every match starts with a
+                voice note, so you fall for how someone thinks and talks — not just how they look.
+                Underneath it all, decades of relationship research quietly do the math.
+              </p>
+            </div>
+            <div className="overflow-hidden rounded-3xl border border-glass-stroke bg-glass p-2 shadow-glass backdrop-blur-xl">
+              <img
+                src={compatibilityMapping.url}
+                alt="Compatibility mapping showing why two people matched"
+                width={398}
+                height={279}
+                loading="lazy"
+                className="aspect-[398/279] w-full rounded-2xl object-cover"
+              />
+            </div>
           </div>
           <div className="mt-10 grid items-stretch gap-6 sm:mt-12 md:grid-cols-3">
             {[
@@ -166,16 +179,16 @@ function Index() {
         {/* COACH */}
         <section id="coach" className={SECTION}>
           <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] lg:gap-16">
-            <div className="relative mx-auto w-full max-w-2xl pb-12 pr-5 sm:pb-16 sm:pr-12 lg:mx-0">
+            <div className="relative mx-auto grid w-full max-w-2xl grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] items-center gap-3 sm:gap-5 lg:mx-0">
               <img
                 src={coachImg}
                 alt="A Clovely relationship coach helping remotely from her computer"
                 width={1200}
                 height={1200}
                 loading="lazy"
-                className="aspect-square w-[82%] rounded-3xl object-cover shadow-soft"
+                className="aspect-[4/5] w-full rounded-3xl object-cover shadow-soft"
               />
-              <div className="absolute bottom-0 right-0 w-[57%] overflow-hidden rounded-3xl border border-glass-stroke bg-glass p-2 shadow-glass backdrop-blur-xl sm:p-3">
+              <div className="w-full overflow-hidden rounded-3xl border border-glass-stroke bg-glass p-2 shadow-glass backdrop-blur-xl sm:p-3">
                 <img
                   src={coachConversation.url}
                   alt="A private conversation with a Clovely relationship coach"
