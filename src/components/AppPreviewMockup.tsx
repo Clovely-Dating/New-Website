@@ -60,8 +60,9 @@ export function AppPreviewMockup({
         <div className="mt-3 flex items-center justify-center gap-2 rounded-full bg-sage/40 px-3 py-2 text-[11px] font-semibold text-ink">
           <LockIcon /> Photos stay hidden until you both agree to reveal.
         </div>
-        <div className="mt-3 w-full text-center text-xs font-bold text-ink">
-          Why we matched you⌄
+        <div className="mt-3 flex w-full items-center justify-center gap-1.5 text-center text-xs font-bold text-ink">
+          <span>Why we matched you</span>
+          <span className="text-sm leading-none" aria-hidden="true">⌄</span>
         </div>
       </div>
 
