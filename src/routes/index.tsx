@@ -75,7 +75,7 @@ function Index() {
 
       <main className="mx-auto max-w-6xl px-6">
         {/* HERO */}
-        <section className="grid items-center gap-12 pb-16 pt-8 sm:pb-20 lg:grid-cols-12 lg:gap-16 lg:pb-24">
+        <section className="grid items-center gap-10 pb-16 pt-8 sm:gap-12 sm:pb-20 lg:grid-cols-12 lg:gap-16 lg:pb-24">
           <div className="lg:col-span-7">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3.5 py-2 text-sm text-muted-foreground">
               <span className="size-1.5 rounded-full bg-sage-deep" />
@@ -121,7 +121,7 @@ function Index() {
 
         {/* METHOD */}
         <section id="method" className={SECTION}>
-          <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,0.72fr)] lg:gap-14">
+          <div className="grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_minmax(17rem,0.72fr)] md:gap-10 lg:gap-14">
             <div className="max-w-2xl">
               <p className={EYEBROW}>HOW IT WORKS</p>
               <h2 className={H2}>Personality first. Looks come later.</h2>
@@ -131,14 +131,14 @@ function Index() {
                 Underneath it all, decades of relationship research quietly do the math.
               </p>
             </div>
-            <div className="overflow-hidden rounded-3xl border border-glass-stroke bg-glass p-2 shadow-glass backdrop-blur-xl">
+            <div className="flex w-full items-center justify-center overflow-hidden rounded-3xl border border-glass-stroke bg-glass p-2 shadow-glass backdrop-blur-xl">
               <img
                 src={compatibilityMapping.url}
                 alt="Compatibility mapping showing why two people matched"
                 width={398}
                 height={279}
                 loading="lazy"
-                className="aspect-[398/279] w-full rounded-2xl object-cover"
+                className="h-auto w-full rounded-2xl object-contain"
               />
             </div>
           </div>
@@ -178,8 +178,8 @@ function Index() {
 
         {/* COACH */}
         <section id="coach" className={SECTION}>
-          <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] lg:gap-16">
-            <div className="relative mx-auto grid w-full max-w-2xl grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] items-center gap-3 sm:gap-5 lg:mx-0">
+          <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] lg:gap-16">
+            <div className="mx-auto grid w-full max-w-2xl grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] items-center gap-3 sm:gap-5 lg:mx-0">
               <img
                 src={coachImg}
                 alt="A Clovely relationship coach helping remotely from her computer"
@@ -239,7 +239,7 @@ function Index() {
 
         {/* SAFETY */}
         <section id="safety" className={SECTION}>
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="grid items-center gap-10 sm:gap-12 md:grid-cols-2 md:gap-10 lg:gap-16">
             <div className="max-w-xl">
               <p className={EYEBROW}>PRIVACY & SAFETY</p>
               <h2 className={H2}>Built so you feel heard, not exposed</h2>
