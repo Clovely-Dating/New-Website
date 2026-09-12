@@ -5,9 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Clovely design system — warm, grounded, research-led.
- * Palette derived from the Clovely brand style guide:
- * plum #5C1A31 · sage #8BB19A · coral #E97451 · taupe #BA9F8F
+ * Clovely Prism Glass design system.
+ * Ink typography over translucent glass and softly drifting color fields.
  */
 
 @theme inline {
@@ -47,45 +46,64 @@
   --color-mustard: var(--mustard);
   --color-paper: var(--paper);
   --color-paper-warm: var(--paper-warm);
+  --color-ink: var(--ink);
+  --color-sky: var(--sky);
+  --color-tangerine: var(--tangerine);
+  --color-lilac: var(--lilac);
+  --color-gold: var(--gold);
+  --color-mist: var(--mist);
+  --color-rose: var(--rose);
+  --color-glass: var(--glass);
+  --color-glass-stroke: var(--glass-stroke);
 
-  --font-display: "Quicksand", ui-rounded, system-ui, sans-serif;
-  --font-body: "Lato", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", ui-rounded, system-ui, sans-serif;
+  --font-body: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
-  --radius: 1rem;
+  --radius: 1.25rem;
 
-  --plum: oklch(0.32 0.098 5.5);
-  --sage: oklch(0.75 0.043 156);
-  --sage-deep: oklch(0.56 0.048 156);
-  --coral: oklch(0.68 0.145 42);
-  --taupe: oklch(0.73 0.026 60);
-  --mustard: oklch(0.86 0.11 105);
-  --paper: oklch(0.98 0.008 90);
-  --paper-warm: oklch(0.955 0.014 78);
+  --ink: oklch(0.27 0.05 265);
+  --sky: oklch(0.8 0.11 232);
+  --tangerine: oklch(0.78 0.15 58);
+  --lilac: oklch(0.79 0.1 300);
+  --gold: oklch(0.86 0.13 90);
+  --sage: oklch(0.84 0.1 152);
+  --sage-deep: oklch(0.58 0.1 152);
+  --coral: oklch(0.68 0.17 38);
+  --mist: oklch(0.93 0.03 235);
+  --rose: oklch(0.8 0.11 15);
+  --paper: oklch(0.968 0.014 250);
+  --paper-warm: oklch(0.95 0.025 255);
+  --plum: var(--ink);
+  --taupe: var(--lilac);
+  --mustard: var(--gold);
+  --glass: color-mix(in oklab, oklch(1 0 0) 62%, transparent);
+  --glass-stroke: color-mix(in oklab, oklch(1 0 0) 72%, transparent);
 
   --background: var(--paper);
-  --foreground: var(--plum);
-  --card: oklch(1 0 0);
-  --card-foreground: var(--plum);
-  --popover: oklch(1 0 0);
-  --popover-foreground: var(--plum);
-  --primary: var(--plum);
-  --primary-foreground: oklch(0.98 0.008 90);
-  --secondary: var(--paper-warm);
-  --secondary-foreground: var(--plum);
-  --muted: var(--paper-warm);
-  --muted-foreground: oklch(0.52 0.02 30);
+  --foreground: var(--ink);
+  --card: var(--glass);
+  --card-foreground: var(--ink);
+  --popover: oklch(0.99 0.006 250);
+  --popover-foreground: var(--ink);
+  --primary: var(--coral);
+  --primary-foreground: oklch(0.99 0.006 250);
+  --secondary: color-mix(in oklab, var(--mist) 74%, transparent);
+  --secondary-foreground: var(--ink);
+  --muted: color-mix(in oklab, var(--mist) 70%, transparent);
+  --muted-foreground: oklch(0.5 0.04 262);
   --accent: var(--coral);
-  --accent-foreground: oklch(0.99 0.005 90);
+  --accent-foreground: var(--ink);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.9 0.014 70);
-  --input: oklch(0.9 0.014 70);
+  --border: color-mix(in oklab, oklch(1 0 0) 72%, var(--mist));
+  --input: color-mix(in oklab, var(--ink) 14%, transparent);
   --ring: var(--coral);
 
-  --shadow-soft: 0 18px 44px -24px color-mix(in oklab, var(--plum) 40%, transparent);
-  --gradient-warm: linear-gradient(135deg, var(--plum), var(--coral));
+  --shadow-soft: 0 20px 50px -26px color-mix(in oklab, var(--ink) 35%, transparent);
+  --shadow-glass: inset 0 1px 0 color-mix(in oklab, oklch(1 0 0) 88%, transparent), 0 18px 44px -24px color-mix(in oklab, var(--ink) 38%, transparent);
+  --shadow-tactile: inset 0 1px 0 color-mix(in oklab, oklch(1 0 0) 45%, transparent), 0 12px 22px -14px color-mix(in oklab, var(--ink) 48%, transparent);
 }
 
 @layer base {
@@ -104,7 +122,7 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.015em;
+    letter-spacing: 0;
   }
 }
 
@@ -113,13 +131,19 @@
 }
 
 @utility text-gradient-warm {
-  background-image: var(--gradient-warm);
-  background-clip: text;
-  color: transparent;
+  color: var(--color-coral);
 }
 
 @utility bg-gradient-warm {
-  background-image: var(--gradient-warm);
+  background-color: var(--color-coral);
+}
+
+@utility shadow-glass {
+  box-shadow: var(--shadow-glass);
+}
+
+@utility shadow-tactile {
+  box-shadow: var(--shadow-tactile);
 }
 
 /* Slow-drifting lava-lamp gradient backdrop */
@@ -142,7 +166,7 @@
 @utility lava-blob {
   position: absolute;
   border-radius: 9999px;
-  filter: blur(70px);
+  filter: blur(84px);
   will-change: transform;
 }
 
@@ -156,10 +180,38 @@
 
 /* Frosted embossed glass frame */
 @utility glass-emboss {
-  background: color-mix(in oklab, var(--background) 55%, transparent);
-  backdrop-filter: blur(14px) saturate(135%);
-  box-shadow:
-    inset 0 2px 3px color-mix(in oklab, white 70%, transparent),
-    inset 0 -2px 4px color-mix(in oklab, var(--plum) 22%, transparent),
-    0 26px 60px -26px color-mix(in oklab, var(--plum) 55%, transparent);
+  background: var(--glass);
+  backdrop-filter: blur(22px) saturate(150%);
+  box-shadow: var(--shadow-glass);
+}
+
+@utility prism-field {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--background);
+  &::before {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    inset: -15%;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 12% 18%, color-mix(in oklab, var(--sky) 65%, transparent) 0 10%, transparent 28%),
+      radial-gradient(circle at 88% 14%, color-mix(in oklab, var(--tangerine) 48%, transparent) 0 9%, transparent 28%),
+      radial-gradient(circle at 74% 66%, color-mix(in oklab, var(--lilac) 52%, transparent) 0 12%, transparent 31%),
+      radial-gradient(circle at 18% 78%, color-mix(in oklab, var(--sage) 52%, transparent) 0 10%, transparent 30%),
+      radial-gradient(circle at 52% 42%, color-mix(in oklab, var(--gold) 35%, transparent) 0 8%, transparent 27%);
+    filter: blur(48px);
+    animation: prism-drift 28s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes prism-drift {
+  from { transform: translate3d(-2%, -1%, 0) scale(1); }
+  to { transform: translate3d(3%, 2%, 0) scale(1.05); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prism-field::before { animation: none; }
+  .voice-bar { animation: none; }
 }

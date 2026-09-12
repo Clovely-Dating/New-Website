@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { CloverMark } from "@/components/CloverMark";
-import appPreview from "@/assets/app-preview.jpg";
+import { AppPreviewMockup } from "@/components/AppPreviewMockup";
 
 // Replace this with your real App Store URL once the app is live.
 const APP_STORE_URL = "https://apps.apple.com/app/clovely";
@@ -29,22 +29,15 @@ export const Route = createFileRoute("/auth")({
 
 function AuthPage() {
   return (
-    <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-background px-5 py-16">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
-        <div className="lava-blob lava-1 -left-24 top-[-10%] h-[42rem] w-[42rem] bg-coral/35" />
-        <div className="lava-blob lava-2 -right-32 top-[10%] h-[38rem] w-[38rem] bg-sage/40" />
-        <div className="lava-blob lava-3 bottom-[-20%] left-[20%] h-[40rem] w-[40rem] bg-taupe/40" />
-        <div className="lava-blob lava-2 bottom-[-10%] right-[5%] h-[26rem] w-[26rem] bg-plum/20" />
-      </div>
-
-      <div className="w-full max-w-md">
+    <main className="prism-field relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-background px-5 py-12">
+      <div className="w-full max-w-5xl">
         <Link to="/" className="mb-10 flex items-center justify-center gap-3">
           <CloverMark className="h-10 w-10" />
           <span className="font-display text-2xl font-bold tracking-tight">Clovely</span>
         </Link>
 
-        <div className="glass-emboss rounded-3xl border border-border/60 p-7 sm:p-9">
-          <div className="text-center">
+        <div className="glass-emboss grid items-center gap-9 rounded-[2rem] border border-glass-stroke p-7 sm:p-10 md:grid-cols-[0.9fr_1.1fr] md:gap-12">
+          <div className="text-center md:text-left">
             <h1 className="font-display text-2xl font-bold tracking-tight whitespace-nowrap sm:text-[1.75rem]">
               Get Clovely on your phone
             </h1>
@@ -52,31 +45,13 @@ function AuthPage() {
               The full experience — personality quiz, voice notes, matches, and your relationship
               coach — is built for iOS. Download the app to get started.
             </p>
-          </div>
 
-          <div className="mt-8 flex justify-center">
-            <div className="glass-emboss relative w-56 overflow-hidden rounded-[2.25rem] border-[6px] border-white/40 sm:w-64">
-              <img
-                src={appPreview}
-                alt="Clovely app preview showing a match profile with voice notes and compatibility scores"
-                width={1024}
-                height={1024}
-                className="h-auto w-full"
-              />
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-0 rounded-[1.9rem] bg-gradient-to-br from-white/45 via-transparent to-white/15"
-              />
-            </div>
-          </div>
-
-
-          <div className="mt-8 flex flex-col items-center gap-4">
+            <div className="mt-8 flex flex-col items-center gap-4 md:items-start">
             <a
               href={APP_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 rounded-xl bg-black px-5 py-3 text-white transition-opacity hover:opacity-90"
+              className="inline-flex items-center gap-2.5 rounded-xl bg-ink px-5 py-3 text-background shadow-tactile transition-opacity hover:opacity-90"
             >
               <AppleLogo className="h-7 w-7" />
               <div className="flex flex-col leading-none">
@@ -93,6 +68,11 @@ function AuthPage() {
               Already have an account?{" "}
               <span className="text-foreground">Open the app to sign in.</span>
             </p>
+            </div>
+          </div>
+
+          <div className="flex justify-center">
+            <AppPreviewMockup compact />
           </div>
         </div>
       </div>
