@@ -2,7 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { CloverMark } from "@/components/CloverMark";
 import { AppPreviewMockup } from "@/components/AppPreviewMockup";
 import heroWoman from "@/assets/hero-woman.jpg";
-import coachImg from "@/assets/coach.jpg";
+import coachImg from "@/assets/remote-relationship-coach.jpg";
+import coachConversation from "@/assets/coach-conversation.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,7 +27,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const SECTION = "border-t border-border py-16 sm:py-24";
+const SECTION = "border-t border-border py-16 sm:py-20 lg:py-24";
 const EYEBROW = "text-sm font-medium uppercase tracking-[0.3em] text-muted-foreground";
 const H2 = "mt-4 font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl";
 
@@ -73,7 +74,7 @@ function Index() {
 
       <main className="mx-auto max-w-6xl px-6">
         {/* HERO */}
-        <section className="grid items-center gap-12 pb-16 pt-8 sm:pb-24 lg:grid-cols-12 lg:gap-16">
+        <section className="grid items-center gap-12 pb-16 pt-8 sm:pb-20 lg:grid-cols-12 lg:gap-16 lg:pb-24">
           <div className="lg:col-span-7">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3.5 py-2 text-sm text-muted-foreground">
               <span className="size-1.5 rounded-full bg-sage-deep" />
@@ -113,7 +114,7 @@ function Index() {
           </div>
 
           <div className="lg:col-span-5">
-            <AppPreviewMockup />
+            <AppPreviewMockup showVoicePreview={false} />
           </div>
         </section>
 
@@ -128,7 +129,7 @@ function Index() {
               Underneath it all, decades of relationship research quietly do the math.
             </p>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid items-stretch gap-6 sm:mt-12 md:grid-cols-3">
             {[
               {
                 n: "01",
@@ -164,16 +165,28 @@ function Index() {
 
         {/* COACH */}
         <section id="coach" className={SECTION}>
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-            <img
-              src={coachImg}
-              alt="A Clovely relationship coach in her studio"
-              width={1024}
-              height={1024}
-              loading="lazy"
-              className="aspect-square w-full rounded-3xl object-cover shadow-soft"
-            />
-            <div>
+          <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] lg:gap-16">
+            <div className="relative mx-auto w-full max-w-2xl pb-12 pr-5 sm:pb-16 sm:pr-12 lg:mx-0">
+              <img
+                src={coachImg}
+                alt="A Clovely relationship coach helping remotely from her computer"
+                width={1200}
+                height={1200}
+                loading="lazy"
+                className="aspect-square w-[82%] rounded-3xl object-cover shadow-soft"
+              />
+              <div className="absolute bottom-0 right-0 w-[57%] overflow-hidden rounded-3xl border border-glass-stroke bg-glass p-2 shadow-glass backdrop-blur-xl sm:p-3">
+                <img
+                  src={coachConversation.url}
+                  alt="A private conversation with a Clovely relationship coach"
+                  width={446}
+                  height={482}
+                  loading="lazy"
+                  className="aspect-[446/482] w-full rounded-2xl object-cover"
+                />
+              </div>
+            </div>
+            <div className="max-w-xl lg:max-w-none">
               <p className={EYEBROW}>The coach</p>
               <h2 className={H2}>A relationship coach in your corner</h2>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
@@ -198,7 +211,7 @@ function Index() {
                   </li>
                 ))}
               </ul>
-               <div className="mt-8 rounded-2xl border border-glass-stroke bg-glass p-6 shadow-glass backdrop-blur-xl">
+              <div className="mt-8 rounded-2xl border border-glass-stroke bg-glass p-6 shadow-glass backdrop-blur-xl">
                 <p className="text-base leading-relaxed text-muted-foreground">
                   &ldquo;I was about to ghost a genuinely good match. My coach reframed the tension
                   and gave me a line to use. We matched a month later.&rdquo;
@@ -214,7 +227,7 @@ function Index() {
         {/* SAFETY */}
         <section id="safety" className={SECTION}>
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-            <div>
+            <div className="max-w-xl">
               <p className={EYEBROW}>PRIVACY & SAFETY</p>
               <h2 className={H2}>Built so you feel heard, not exposed</h2>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">

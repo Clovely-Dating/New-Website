@@ -22,7 +22,13 @@ function VoiceWave({ duration, active = false }: { duration: string; active?: bo
   );
 }
 
-export function AppPreviewMockup({ compact = false }: { compact?: boolean }) {
+export function AppPreviewMockup({
+  compact = false,
+  showVoicePreview = true,
+}: {
+  compact?: boolean;
+  showVoicePreview?: boolean;
+}) {
   return (
     <div className={`app-device mx-auto w-full ${compact ? "max-w-[18rem]" : "max-w-[23rem]"}`}>
       <div className="mb-4 flex items-center gap-2 rounded-full border border-glass-stroke bg-glass px-4 py-2.5 shadow-glass backdrop-blur-xl">
@@ -68,7 +74,7 @@ export function AppPreviewMockup({ compact = false }: { compact?: boolean }) {
       </div>
       <p className="mt-2 text-center text-[10px] font-bold uppercase tracking-[0.12em] text-muted-foreground">Connect</p>
 
-      {!compact && (
+      {showVoicePreview && !compact && (
         <div className="mt-5 space-y-2 rounded-[1.5rem] border border-glass-stroke bg-glass p-3 shadow-glass backdrop-blur-xl">
           <p className="px-1 text-[9px] font-extrabold uppercase tracking-[0.22em] text-muted-foreground">Voice chat preview</p>
           <VoiceWave duration="0:38" />
