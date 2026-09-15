@@ -93,7 +93,7 @@ function Index() {
             to="/auth"
             className="hidden text-base text-muted-foreground transition-colors hover:text-foreground sm:block"
           >
-            Sign Up
+            Sign In
           </Link>
           <Link
             to="/auth"
