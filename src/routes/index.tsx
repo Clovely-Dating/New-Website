@@ -93,13 +93,13 @@ function Index() {
             to="/auth"
             className="hidden text-base text-muted-foreground transition-colors hover:text-foreground sm:block"
           >
-            Sign In
+            Sign Up
           </Link>
           <Link
             to="/auth"
             className="rounded-full bg-primary px-5 py-2.5 text-base font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
-            Create Profile
+            Join Now
           </Link>
         </div>
       </header>
