@@ -1,0 +1,23 @@
+# Clovely
+
+> Clovely is a personality-first, voice-led dating app for people who want a long-term relationship, paired with a licensed relationship coach.
+
+Clovely matches people in their mid-20s to 40s on personality, values and life goals instead of photos. Every match begins with a voice note; photos stay hidden until both people agree to reveal them. Matching draws on decades of relationship research, and every member gets a relationship coach for check-ins, private messaging and virtual or in-person sessions.
+
+## Key facts
+
+- Category: dating and relationships app (iOS, coming soon)
+- Audience: adults in their mid-20s to 40s seeking a long-term relationship
+- Approach: voice-led first impressions, values and life-goal compatibility, conflict-repair coaching
+- Differentiator: photos unlock only by mutual reveal; every member is photo and voice verified
+- Coaching: gentle check-ins, private text access to a coach, virtual or in-person sessions with a licensed relationship coach
+- Tagline: Finding depth through luck and love
+
+## Pages
+
+- [Home](https://clovelywebsite.lovable.app/): how matching works, the coach, privacy and safety
+- [Download](https://clovelywebsite.lovable.app/auth): get Clovely on the App Store
+
+## Contact
+
+Website: https://clovelywebsite.lovable.app/
