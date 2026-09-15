@@ -21,7 +21,46 @@ export const Route = createFileRoute("/auth")({
         content: "Get Clovely on the App Store. Find depth through luck and love.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://clovelywebsite.lovable.app/auth" },
       { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "https://clovelywebsite.lovable.app/auth" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "Clovely",
+          applicationCategory: "LifestyleApplication",
+          operatingSystem: "iOS",
+          url: "https://clovelywebsite.lovable.app/auth",
+          description:
+            "Personality-first, voice-led dating with a licensed relationship coach. Coming soon to the App Store.",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://clovelywebsite.lovable.app/",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Download",
+              item: "https://clovelywebsite.lovable.app/auth",
+            },
+          ],
+        }),
+      },
     ],
   }),
   component: AuthPage,

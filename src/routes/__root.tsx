@@ -103,6 +103,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Clovely",
+          url: "https://clovelywebsite.lovable.app/",
+          logo: "https://clovelywebsite.lovable.app/favicon.png",
+          description:
+            "Personality-first, voice-led dating for lasting relationships, with a licensed relationship coach.",
+          slogan: "Finding depth through luck and love",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Clovely",
+          url: "https://clovelywebsite.lovable.app/",
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,

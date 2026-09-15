@@ -22,7 +22,38 @@ export const Route = createFileRoute("/")({
           "Personality-first, voice-led matching grounded in relationship research, plus a licensed relationship coach. A warmer way to meet someone who wants what you want.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://clovelywebsite.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "keywords",
+        content:
+          "voice dating app, personality-first dating, long-term relationship app, relationship coach, serious dating app",
+      },
+    ],
+    links: [{ rel: "canonical", href: "https://clovelywebsite.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Clovely — Personality-first dating for something real",
+          url: "https://clovelywebsite.lovable.app/",
+          description:
+            "Clovely is personality-first, voice-led dating. Match on what actually predicts a lasting relationship, with a relationship coach in your corner.",
+          about: {
+            "@type": "Service",
+            name: "Clovely relationship coaching and matching",
+            serviceType: "Dating and relationship coaching",
+            provider: { "@type": "Organization", name: "Clovely" },
+            audience: {
+              "@type": "PeopleAudience",
+              suggestedMinAge: 25,
+              suggestedMaxAge: 45,
+            },
+          },
+        }),
+      },
     ],
   }),
   component: Index,
