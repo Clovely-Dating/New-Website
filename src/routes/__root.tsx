@@ -85,7 +85,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Clovely" },
       { property: "og:description", content: "Personality-first, voice-led dating for lasting relationships." },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Clovely" },
+      { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
     ],
     links: [
       {
@@ -99,6 +102,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap",
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Clovely",
+          url: "https://clovelywebsite.lovable.app/",
+          logo: "https://clovelywebsite.lovable.app/favicon.png",
+          description:
+            "Personality-first, voice-led dating for lasting relationships, with a licensed relationship coach.",
+          slogan: "Finding depth through luck and love",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Clovely",
+          url: "https://clovelywebsite.lovable.app/",
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,

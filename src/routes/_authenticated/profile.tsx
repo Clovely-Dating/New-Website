@@ -21,6 +21,7 @@ export const Route = createFileRoute("/_authenticated/profile")({
       },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "robots", content: "noindex, nofollow" },
     ],
   }),
   component: ProfilePage,
