@@ -85,7 +85,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Clovely" },
       { property: "og:description", content: "Personality-first, voice-led dating for lasting relationships." },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Clovely" },
+      { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
     ],
     links: [
       {
