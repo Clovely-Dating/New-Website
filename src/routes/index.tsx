@@ -3,8 +3,8 @@ import { CloverMark } from "@/components/CloverMark";
 import { AppPreviewMockup } from "@/components/AppPreviewMockup";
 import heroWoman from "@/assets/hero-woman.jpg";
 import coachImg from "@/assets/remote-relationship-coach.jpg";
-import coachConversation from "@/assets/coach-conversation.png.asset.json";
-import compatibilityMapping from "@/assets/compatibility-mapping.png.asset.json";
+import coachConversation from "@/assets/coach-conversation.png";
+import compatibilityMapping from "@/assets/compatibility-mapping.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -164,7 +164,7 @@ function Index() {
             </div>
             <div className="flex w-full items-center justify-center overflow-hidden rounded-3xl border border-glass-stroke bg-glass p-2 shadow-glass backdrop-blur-xl">
               <img
-                src={compatibilityMapping.url}
+                src={compatibilityMapping}
                 alt="Compatibility mapping showing why two people matched"
                 width={398}
                 height={279}
@@ -221,7 +221,7 @@ function Index() {
               />
               <div className="w-full overflow-hidden rounded-3xl border border-glass-stroke bg-glass p-2 shadow-glass backdrop-blur-xl sm:p-3">
                 <img
-                  src={coachConversation.url}
+                  src={coachConversation}
                   alt="A private conversation with a Clovely relationship coach"
                   width={446}
                   height={482}

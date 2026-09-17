@@ -1,7 +1,7 @@
-import logoAsset from "@/assets/clovely-logo.png.asset.json";
+import logoSrc from "@/assets/clovely-logo.png";
 
 type Props = { className?: string };
 
 export function CloverMark({ className }: Props) {
-  return <img src={logoAsset.url} className={className} alt="Clovely" />;
+  return <img src={logoSrc} className={className} alt="Clovely" />;
 }
