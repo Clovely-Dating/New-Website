@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CloverMark } from "@/components/CloverMark";
 import { AppPreviewMockup } from "@/components/AppPreviewMockup";
+import { Footer } from "@/components/Footer";
 import heroWoman from "@/assets/hero-woman.jpg";
 import coachImg from "@/assets/remote-relationship-coach.jpg";
 import coachConversation from "@/assets/coach-conversation.png";
@@ -67,40 +68,42 @@ function Index() {
   return (
     <div className="prism-field min-h-screen bg-background font-body text-[17px] leading-relaxed text-foreground antialiased sm:text-lg">
       {/* NAV */}
-      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <div className="flex items-center gap-3">
-          <CloverMark className="size-10" />
-          <div>
-            <p className="font-display text-xl font-bold leading-none tracking-tight">Clovely</p>
-            <p className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
-              Personality-first dating
-            </p>
+      <header className="sticky top-0 z-50 border-b border-transparent bg-background/80 backdrop-blur-xl transition-colors">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+          <div className="flex items-center gap-3">
+            <CloverMark className="size-10" />
+            <div>
+              <p className="font-display text-xl font-bold leading-none tracking-tight">Clovely</p>
+              <p className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+                Personality-first dating
+              </p>
+            </div>
           </div>
-        </div>
-        <nav className="hidden items-center gap-8 text-base text-muted-foreground md:flex">
-          <a href="#method" className="transition-colors hover:text-foreground">
-            How It Works
-          </a>
-          <a href="#coach" className="transition-colors hover:text-foreground">
-            The Coach
-          </a>
-          <a href="#safety" className="transition-colors hover:text-foreground">
-            Privacy & Safety
-          </a>
-        </nav>
-        <div className="flex items-center gap-4">
-          <Link
-            to="/auth"
-            className="hidden text-base text-muted-foreground transition-colors hover:text-foreground sm:block"
-          >
-            Sign In
-          </Link>
-          <Link
-            to="/auth"
-            className="rounded-full bg-primary px-5 py-2.5 text-base font-medium text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Join Now
-          </Link>
+          <nav className="hidden items-center gap-8 text-base text-muted-foreground md:flex">
+            <a href="#method" className="transition-colors hover:text-foreground">
+              How It Works
+            </a>
+            <a href="#coach" className="transition-colors hover:text-foreground">
+              The Coach
+            </a>
+            <a href="#safety" className="transition-colors hover:text-foreground">
+              Privacy & Safety
+            </a>
+          </nav>
+          <div className="flex items-center gap-4">
+            <Link
+              to="/auth"
+              className="hidden text-base text-muted-foreground transition-colors hover:text-foreground sm:block"
+            >
+              Sign In
+            </Link>
+            <Link
+              to="/auth"
+              className="rounded-full bg-primary px-5 py-2.5 text-base font-medium text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              Join Now
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -323,23 +326,7 @@ function Index() {
         </section>
       </main>
 
-      <footer className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-border px-6 py-10 text-sm text-muted-foreground sm:flex-row">
-        <div className="flex items-center gap-2">
-          <CloverMark className="size-8" />
-          <span>Clovely · Reclaiming human connection from the scroll</span>
-        </div>
-        <div className="flex gap-6">
-          <a href="#safety" className="transition-colors hover:text-foreground">
-            Join Today
-          </a>
-          <a href="#method" className="transition-colors hover:text-foreground">
-            Terms & Condictions
-          </a>
-          <a href="#join" className="transition-colors hover:text-foreground">
-            Privacy Policy
-          </a>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
